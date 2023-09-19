@@ -39,9 +39,9 @@ cv::Mat rotate_image(const cv::Mat& input_image, const int angle) {
 }
 
 int main() {
-    cv::Mat input_image = cv::imread("sria91.png");
+    cv::Mat input_image = cv::imread("../sria91.png");
     cv::Mat output_image = rotate_image(input_image, 23);
-    cv::imshow("Output", output_image);
-    cv::waitKey(10000);
+    cv::imwrite("Output.png", output_image);
+    cout << "File saved to 'Output.png' in the current folder" << endl;
     return 0;
 }
